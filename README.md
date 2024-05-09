@@ -39,6 +39,7 @@ This project creates an exposed virtual machine that relays the failed RDP attem
 
 ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/f4973399-f582-4a27-9b9e-7ffaeacae51e)
 
+   - Finally, click `Review + Create`... and we are done creating our honeypot VM!
 
    
 2. **Creating Log Analytics Workspace:**
