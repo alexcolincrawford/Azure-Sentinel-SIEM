@@ -19,7 +19,7 @@ This project creates an exposed virtual machine that relays the failed RDP attem
   
 ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/5cbff611-e487-4702-8596-0df13c723adb)
 
-   - **Note: **Ensure that a strong password is allocated to the virtual machine, as it will exposed.
+   - **Note:** Ensure that a strong password is allocated to the virtual machine, as it will exposed.
    - When it comes to `size`, I went with the cheapest, available one that supported 8GiB of RAM.
      
    ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/3c8f56c7-7485-4231-b652-942da272de51)
