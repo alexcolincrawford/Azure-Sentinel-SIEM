@@ -32,6 +32,7 @@ This project creates an exposed virtual machine that relays the failed RDP attem
 
    - Click `Create new` in `Configure network security group`
    - Remove the default rule, and click `Add an inbound rule`.
+
 ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/26e8f7d5-7d04-46f9-bd91-53366bd3c3e3)
 
    - Configure the inbound rule to allow `any` port, and give it priority 100 -> Rules with lower priority numbers (e.g., priority 100) are evaluated before rules with higher priority numbers (e.g., priority 200).
