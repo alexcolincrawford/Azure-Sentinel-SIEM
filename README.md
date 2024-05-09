@@ -11,7 +11,6 @@ This project creates an exposed virtual machine that relays the failed RDP attem
 **Note: This Project Requires A Microsoft Azure Subscription!**
 
 1. **Creating Honeypot Virtual Machine:**
-   _Fill out the relevant information..._
    
    1. Create a new resource group! I named mine 'honeypot'.
    2. GIve it an appropriate name! I named mine 'honeypot-vm'.
