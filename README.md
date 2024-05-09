@@ -11,13 +11,16 @@ This project creates an exposed virtual machine that relays the failed RDP attem
 **Note: This Project Requires A Microsoft Azure Subscription!**
 
 1. **Creating Honeypot Virtual Machine:**
-   - Fill out the relevant information...
-   - Create a new resource group! I named mine 'sentinelLab'.
-   - Select appropriate region and select Win11 Pro for the OS.
+   - _Fill out the relevant information..._
+   
+   1. Create a new resource group! I named mine 'honeypot'.
+   2. GIve it an appropriate name! I named mine 'honeypot-vm'.
+   3. Select an appropriate region
+   4. Select Win11 Pro for the OS.
   
-  ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/97940d29-5697-49f6-bf51-2307b1dce28f)
-  
-   - Ensure that a strong password is allocated to the virtual machine, as it will exposed.
+![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/5cbff611-e487-4702-8596-0df13c723adb)
+
+   - **Note: **Ensure that a strong password is allocated to the virtual machine, as it will exposed.
    - When it comes to `size`, I went with the cheapest, available one that supported 8GiB of RAM.
      
    ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/3c8f56c7-7485-4231-b652-942da272de51)
