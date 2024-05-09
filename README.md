@@ -14,11 +14,11 @@ This project creates an exposed virtual machine that relays the failed RDP attem
    - Fill out the relevant information...
   
   ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/97940d29-5697-49f6-bf51-2307b1dce28f)
-
+  
    - Ensure that a strong password is allocated to the virtual machine, as it will exposed.
-![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/3c8f56c7-7485-4231-b652-942da272de51)
+   - 
+   ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/3c8f56c7-7485-4231-b652-942da272de51)
    - When it comes to `size`, I went with the cheapest, available one that supported 8GiB of RAM.
-
 
 2. **Creating Log Analytics Workspace:**
    - Create 
