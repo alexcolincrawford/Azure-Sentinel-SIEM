@@ -66,7 +66,12 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
 
 
      
-4. **Creating A Azure Sentinel Workspace:**
+4. **Creating A Azure Sentinel Workspace & Workbook:**
    - Navigate to `Sentinel`, create a new workspace.
+   - Select `Workbook` -> `Add Workbook`
+   - Edit the worrkbook; remove all elements in the created workbook.
+   - Select `Add` -> `Add Query`
+      - We must create a query that contain extract the data out of RawData into seperate columns
+      - [This query](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/blob/main/azure_query) can be used to that exact thing.  
 
 
