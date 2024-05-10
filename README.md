@@ -2,8 +2,20 @@
 
 Have you ever wondered how to gain hands-on experience with a robust SIEM like Azure Sentinel? I did too, and now I'm determined to make it happen by setting up my own Azure Sentinel homelab. This project involves creating a honeypot virtual machine that relays failed RDP attempts to Azure Sentinel, allowing us to explore this powerful tool firsthand while visualizing intrusion attempts on a world map!
 
-### Steps to Set Up the Honeypot:
+### Skills Gained
+- Hands-on experience setting up and configuring Azure Sentinel SIEM.
+- Understanding of honeypot deployment and log analysis techniques.
+- Knowledge of Azure networking, security groups, and Log Analytics Workspace.
+- Foundational Understanding of KQL.
 
+### Tools Used
+
+- Azure Sentinel SIEM
+- Azure Virtual Machines
+- Azure Log Analytics Workspace
+- PowerShell scripting for log generation and automation
+
+### Steps to Set Up the Honeypot:
 **Note: This Project Requires A Microsoft Azure Subscription & A Valid API Key For ipgeolcation**
 
 1. **Creating the Honeypot Virtual Machine:**
