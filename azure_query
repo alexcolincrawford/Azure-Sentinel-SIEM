@@ -1,0 +1,12 @@
+TABLENAME
+|extend username = extract(@"username:([^,]+)", 1, RawData),
+         timestamp = extract(@"timestamp:([^,]+)", 1, RawData),
+         latitude = extract(@"latitude:([^,]+)", 1, RawData),
+         longitude =extract(@"longitude:([^,]+)", 1, RawData),
+         sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData),
+         state = extract(@"state:([^,]+)", 1, RawData),
+         label = extract(@"label:([^,]+)", 1, RawData),
+         destinationhost = extract(@"destinationhost:([^,])", 1, RawData)
+ |where destinationhost  != "s"
+ | where sourcehost != ""
+ | summarize event_count=count() by timestamp, label,  state, sourcehost, username, destinationhost, longitude, latitude
