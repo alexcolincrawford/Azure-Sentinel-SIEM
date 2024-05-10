@@ -93,7 +93,11 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
 ## Acknowledgements
 
    - I give my thanks to Josh Madakor for the invaluable guidance provided throughout this exceptional project, which allowed me to gain hands-on experience with Azure Sentinel SIEM.  Even though some of the content was outdated, I enjoyed the challenge    of updating it and finding my own solutions to keep it current
+
+## Key Takeaways
+
    - The opportunity to explore Azure Sentinel through this project has been immensely educational and I can't wait to truly grasp the power of Sentinel!
+   - Learnt how to leverage Azure Log Analytics Workspace and Microsoft Sentinel to analyze and visualize security events in real-time
 
 
 
