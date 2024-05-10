@@ -26,7 +26,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
      
    
 
-3. **Creating a Log Analytics Workspace:**
+2. **Creating a Log Analytics Workspace:**
 
-   - Create a Log Analytics Workspace in Azure to collect and analyze logs from our honeypot VM.
-   - Configure data sources and ensure the workspace is connected to Azure Sentinel.
+   - Create a Log Analytics Workspace, name it apppropriately, and ensure it is within the same resource group as our VM.
+   ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/95f9a3c4-96d9-4bd9-b43c-20bacf9e199b)
