@@ -82,8 +82,9 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
        - Change `Metric Label` to `label`
  
  8. **Final Result**
-
+    - We now have an live attack maps of the threat actors attempting to access our VM!
    ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e8f9ea22-578f-427c-8edb-450fa6369188)
-   **Note: This what ~4-6 hours of the VM being exposed** 
+   
+   **Note:This what ~4-6 hours of the VM being exposed** 
 
 
