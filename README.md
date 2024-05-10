@@ -85,6 +85,13 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
     - We now have an live attack maps of the threat actors attempting to access our VM!
    ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e8f9ea22-578f-427c-8edb-450fa6369188)
    
-   **Note:This what ~4-6 hours of the VM being exposed** 
+   **Note: This what ~4-6 hours of the VM being exposed** 
+
+9. **Acknowledgements**
+
+   - I extend my thanks to Josh Madakor for the invaluable guidance provided throughout this exceptional project, which allowed me to gain hands-on experience with Azure Sentinel SIEM. Despite some of the content being out of date, I enjoyed the            challenge of finding my own solutions to create a custom log.
+   - The opportunity to explore Azure Sentinel through this project has been immensely educational and enriching.
+
+
 
 
