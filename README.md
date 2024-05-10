@@ -26,6 +26,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
    ![Create Honeypot VM](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/5cbff611-e487-4702-8596-0df13c723adb)
    - Customize networking settings:
      - Change `NIC network security group` from `basic` to `advanced`.
+     
      ![Advanced Networking](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/c7dbd3ff-425f-4b02-8b09-75f76381bc4f)
      - Configure an inbound rule to allow any incoming traffic, with priority 100 for high priority.
      ![Inbound Rule](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/92eb28ec-63f4-4bdb-9629-cacc162aac3f)
