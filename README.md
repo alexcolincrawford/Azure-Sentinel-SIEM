@@ -81,6 +81,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
      ![Output From Query](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e7d9e5a2-8440-4f9d-bd43-cf127ba5399a)
   - Change the `Visualization` from `Set by query` to `Map`
   - Edit the `Map Settings`:
+
      ![Map Settings](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/b0eca391-b285-49ef-a134-f8158de973f5)
        - Change `Metric Label` to `label`
  
