@@ -18,7 +18,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
 
    - Customize networking settings:
      - Change `NIC network security group` from `basic` to `advanced`.
-     - Configure an inbound rule to allow any incoming traffic with priority 100 for evaluation precedence.
+     - Configure an inbound rule to allow any incoming traffic with priority 100 for high priority.
      - Review and create the virtual machine.
      
    ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/c7dbd3ff-425f-4b02-8b09-75f76381bc4f)
