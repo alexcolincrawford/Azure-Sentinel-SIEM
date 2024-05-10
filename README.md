@@ -72,6 +72,10 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
    - Edit the worrkbook; remove all elements in the created workbook.
    - Select `Add` -> `Add Query`
       - We must create a query that contain extract the data out of RawData into seperate columns
-      - [This query](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/blob/main/azure_query) can be used to that exact thing.  
+      - [This query](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/blob/main/azure_query) can be used to that exact thing.
+   - As shown below, we have now extracted each field from the RawData
+
+     ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e7d9e5a2-8440-4f9d-bd43-cf127ba5399a)
+
 
 
