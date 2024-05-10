@@ -30,3 +30,21 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
 
    - Create a Log Analytics Workspace, name it apppropriately, and ensure it is within the same resource group as our VM.
    ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/95f9a3c4-96d9-4bd9-b43c-20bacf9e199b)
+
+3. **Configuring The Microsoft Defender For Cloud:**
+   - Ensure that in `Data Collection`, `All Events` is selected.
+   ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/6e94ea0f-3f8d-4e07-9962-3cc5226a70cf)
+
+4. **Exposing Honeypot To Malicious Actors**
+   - Connect to the VM via the provided IP. (Found within the properties of the VM, under `networking`)
+   - Once connected, navigate to the `Windows Defender Firewall`.
+   - Select `Windows Defender Firewall Properties`
+   - Set `Firewall State` to `OFF` for the _Domain, Private, Public_ profiles.
+      - **!! NOTE: ENSURE THAT YOUR ARE EXPOSING YOUR VM, NOT YOUR HOST DEVICE !!**
+     ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/7c03bfd2-358a-44f8-b486-7fb35b6e5154)
+
+
+4. **Creating A Azure Sentinel Workspace:**
+   - Navigate to `Sentinel`, create a new workspace.
+
+
