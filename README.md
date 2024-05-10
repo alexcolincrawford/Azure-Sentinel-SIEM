@@ -49,7 +49,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
    - This script targets security events with event ID `4625` (Logon Failure), retrieves geolocation data (latitude, longitude, country, etc.) using ipgeolocation.io API, and stores the fetched data in a log file.
    - Start the script.
    
-5. **Creating A Custom Log For Log File: **
+5. **Creating A Custom Log For Log File:**
    - Navigate to `Tables` in the LAW.
    - Click `create` -> `New custom log (MMA-based)`.
    - Pass in a copy of the `failed_rdp.log`
