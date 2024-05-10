@@ -66,16 +66,24 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
 
 
      
-4. **Creating A Azure Sentinel Workspace & Workbook:**
+7. **Creating A Azure Sentinel Workspace & Workbook:**
    - Navigate to `Sentinel`, create a new workspace.
    - Select `Workbook` -> `Add Workbook`
    - Edit the worrkbook; remove all elements in the created workbook.
    - Select `Add` -> `Add Query`
       - We must create a query that contain extract the data out of RawData into seperate columns
       - [This query](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/blob/main/azure_query) can be used to that exact thing.
-   - As shown below, we have now extracted each field from the RawData
+      - As shown below, we have now extracted each field from the RawData
 
      ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e7d9e5a2-8440-4f9d-bd43-cf127ba5399a)
+  - Change the `Visualization` from `Set by query` to `Map`
+  - Edit the `Map Settings`:
+     ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/b0eca391-b285-49ef-a134-f8158de973f5)
+       - Change `Metric Label` to `label`
+ 
+ 8. **Final Result**
 
+   ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e8f9ea22-578f-427c-8edb-450fa6369188)
+   **Note: This what ~4-6 hours of the VM being exposed** 
 
 
