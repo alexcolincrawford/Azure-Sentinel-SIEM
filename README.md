@@ -102,7 +102,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
 9. **Acknowledgements**
 
    - I extend my thanks to Josh Madakor for the invaluable guidance provided throughout this exceptional project, which allowed me to gain hands-on experience with Azure Sentinel SIEM. Despite some of the content being out of date, I enjoyed the            challenge of finding my own solutions to create a custom log.
-   - The opportunity to explore Azure Sentinel through this project has been immensely educational and enriching.
+   - The opportunity to explore Azure Sentinel through this project has been immensely educational and I can't wait to truly grasp the power of Sentinel!
 
 
 
