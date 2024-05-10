@@ -88,11 +88,11 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
 9. **Final Result - Live Attack Map:**
    - Visualize real-time attack data on a world map within Azure Sentinel.
    ![Live Attack Map](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e8f9ea22-578f-427c-8edb-450fa6369188)
-   **Note: This is after approximately 4-6 hours of VM exposure.**
+   **Note:This is after approximately 4-6 hours of VM exposure.**
 
 ## Acknowledgements
 
-   - I extend my thanks to Josh Madakor for the invaluable guidance provided throughout this exceptional project, which allowed me to gain hands-on experience with Azure Sentinel SIEM. Despite some of the content being out of date, I enjoyed the            challenge of finding my own solutions to create a custom log.
+   - I give my thanks to Josh Madakor for the invaluable guidance provided throughout this exceptional project, which allowed me to gain hands-on experience with Azure Sentinel SIEM.  Even though some of the content was outdated, I enjoyed the challenge    of updating it and finding my own solutions to keep it curren
    - The opportunity to explore Azure Sentinel through this project has been immensely educational and I can't wait to truly grasp the power of Sentinel!
 
 
