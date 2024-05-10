@@ -58,6 +58,13 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
       - **Why?:** This is where the logs are stored on the honeypot VM.
    - Name & create it!
 
+5b. **Viewing Custom Log:**
+   - Navigate to `Logs` in the LAW.
+   - Create a new query and search for the newly created log as shown below.
+
+   ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/ba5f2eb8-12ea-4616-b1e9-6595d4623c1e)
+
+
      
 4. **Creating A Azure Sentinel Workspace:**
    - Navigate to `Sentinel`, create a new workspace.
