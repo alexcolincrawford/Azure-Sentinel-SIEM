@@ -1,9 +1,6 @@
 #  Azure-Sentinel-SIEM: Building a Honeypot with Azure Sentinel
 
-I always wondered how I could gain hands-on experience with a powerful SIEM like Azure Sentinel, but finding the right resources seemed impossible. Now, I'm determined to make it happen by setting up my own Azure Sentinel homelab, using the free $200 credit to maximize my hands-on experience and learn the ins and outs of this powerful tool.
-
-This project creates an exposed virtual machine that relays the failed RDP attempts to Azure Sentinel.
-
+Have you ever wondered how to gain hands-on experience with a robust SIEM like Azure Sentinel? I did too, and now I'm determined to make it happen by setting up my own Azure Sentinel homelab. This project involves creating a honeypot virtual machine that relays failed RDP attempts to Azure Sentinel, allowing us to explore this powerful tool firsthand, by displaying the intrusion attempts on a world map!
 
 
 ### Steps
