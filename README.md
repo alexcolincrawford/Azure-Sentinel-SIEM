@@ -4,7 +4,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
 
 ### Steps to Set Up the Honeypot:
 
-**Note: This Project Requires A Microsoft Azure Subscription!**
+**Note: This Project Requires A Microsoft Azure Subscription & A Valid API Key For ipgeolcation**
 
 1. **Creating the Honeypot Virtual Machine:**
 
@@ -35,7 +35,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
    - Ensure that in `Data Collection`, `All Events` is selected.
    ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/6e94ea0f-3f8d-4e07-9962-3cc5226a70cf)
 
-4. **Exposing Honeypot To Malicious Actors**
+4. **Exposing Honeypot To Malicious Actors:**
    - Connect to the VM via the provided IP. (Found within the properties of the VM, under `networking`)
    - Once connected, navigate to the `Windows Defender Firewall`.
    - Select `Windows Defender Firewall Properties`
@@ -43,7 +43,22 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
       - **!! NOTE: ENSURE THAT YOUR ARE EXPOSING YOUR VM, NOT YOUR HOST DEVICE !!**
      ![image](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/7c03bfd2-358a-44f8-b486-7fb35b6e5154)
 
+4. **Generating Log File:**
 
+   - Use a [PowerShell script](https://github.com/joshmadakor1/Sentinel-Lab/blob/main/Custom_Security_Log_Exporter.ps1) to generate custom security logs for Azure Sentinel.
+   - This script targets security events with event ID `4625` (Logon Failure), retrieves geolocation data (latitude, longitude, country, etc.) using ipgeolocation.io API, and stores the fetched data in a log file.
+   - Start the script.
+   
+5. **Creating A Custom Log For Log File: **
+   - Navigate to `Tables` in the LAW.
+   - Click `create` -> `New custom log (MMA-based)`.
+   - Pass in a copy of the `failed_rdp.log`
+   - Ensure the `record delimiter` is `New line`
+   - Set the collection path to `C:\ProgramData\failed_rdp.log`
+      - **Why?:** This is where the logs are stored on the honeypot VM.
+   - Name & create it!
+
+     
 4. **Creating A Azure Sentinel Workspace:**
    - Navigate to `Sentinel`, create a new workspace.
 
