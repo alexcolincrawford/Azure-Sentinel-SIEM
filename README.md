@@ -4,7 +4,9 @@
 
 This project involved deploying an intentionally exposed Windows 11 VM on Microsoft Azure to capture and analyse real-world RDP brute-force attempts. Failed login events (Event ID: #4625) were extracted via PowerShell, enriched with geolocation data, ingested into a Log Analytics Workspace, and visualised in real-time on a world map using Microsoft Sentinel.
 
-The goal was to gain hands-on experience across the full detection pipeline, from log collection and data enrichment through to KQL querying and SIEM visualisation. _Refer to setup.md for the in-detail steps on configuration & setup_
+The goal was to gain hands-on experience across the full detection pipeline, from log collection and data enrichment through to KQL querying and SIEM visualisation.
+
+For detailed configuration and setup steps, refer to the [setup guide](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/blob/main/setup.md) I created.
 
 ---
 
