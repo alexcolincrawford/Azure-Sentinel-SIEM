@@ -1,94 +1,68 @@
-# Azure-Sentinel-SIEM: Building a Honeypot with Azure Sentinel
+# Azure Sentinel SIEM – RDP Honeypot & Live Attack Map
 
-Have you ever wondered how to gain hands-on experience with a robust SIEM like Azure Sentinel? I did too, and now I'm determined to make it happen by setting up my own Azure Sentinel homelab. This project involves creating a honeypot virtual machine that relays failed RDP attempts to Azure Sentinel, allowing us to explore this powerful tool firsthand while visualizing intrusion attempts on a world map!
+## Overview
 
-### Skills Gained
-- Hands-on experience setting up and configuring Azure Sentinel SIEM.
-- Understanding of honeypot deployment and log analysis techniques.
-- Knowledge of Azure networking, security groups, and Log Analytics Workspace.
-- Foundational Understanding of KQL.
+This project involved deploying an intentionally exposed Windows 11 VM on Microsoft Azure to capture and analyse real-world RDP brute-force attempts. Failed login events (Event ID: #4625) were extracted via PowerShell, enriched with geolocation data, ingested into a Log Analytics Workspace, and visualised in real-time on a world map using Microsoft Sentinel.
 
-### Tools Used
+The goal was to gain hands-on experience across the full detection pipeline — from log collection and data enrichment through to KQL querying and SIEM visualisation.
 
-- Azure Sentinel SIEM
-- Azure Virtual Machines
-- Azure Log Analytics Workspace
-- PowerShell scripting for log generation and automation
+---
 
-### Steps to Set Up the Honeypot:
-**Note: This Project Requires A Microsoft Azure Subscription & A Valid API Key For ipgeolcation**
+## Results
 
-1. **Creating the Honeypot Virtual Machine:**
-   - Create a new resource group (e.g., 'honeypot') and name your virtual machine (e.g., 'honeypot-vm').
-   - Choose an appropriate region and select Windows 11 Pro as the OS.
-   - Assign a strong password to the virtual machine, as it will be exposed to potential attacks.
-   - Select an affordable VM size that supports at least 8GiB of RAM.
-   ![Create Honeypot VM](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/5cbff611-e487-4702-8596-0df13c723adb)
-   - Customize networking settings:
-     - Change `NIC network security group` from `basic` to `advanced`.
-     
-     ![Advanced Networking](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/c7dbd3ff-425f-4b02-8b09-75f76381bc4f)
-     - Configure an inbound rule to allow any incoming traffic, with priority 100 for high priority.
-     ![Inbound Rule](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/92eb28ec-63f4-4bdb-9629-cacc162aac3f)
-     - Review and create the virtual machine.
-   
+Within **4–6 hours** of exposing the VM, the honeypot captured **8,669 failed RDP attempts** from across the globe:
 
-2. **Creating a Log Analytics Workspace:**
+| Source | IP | Attempts |
+|---|---|---|
+| India | 117.192.237.237 | 8,310 |
+| Mexico | 187.134.7.165 | 342 |
+| United Kingdom | 31.205.x.x | 10 |
+| United Kingdom | 86.135.x.x | 4 |
+| Panama | 194.165.16.76 | 2 |
+| France | 46.105.132.55 | 1 |
 
-   - Create a Log Analytics Workspace, name it apppropriately, and ensure it is within the same resource group as our VM.
-   ![LAW](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/95f9a3c4-96d9-4bd9-b43c-20bacf9e199b)
+The dominance of a single Indian IP — accounting for over 95% of all attempts — highlights how quickly automated scanning tools discover and hammer exposed RDP ports at scale.
 
-3. **Configuring The Microsoft Defender For Cloud:**
-   - Ensure that in `Data Collection`, `All Events` is selected.
-   ![All Events](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/6e94ea0f-3f8d-4e07-9962-3cc5226a70cf)
+![Live Attack Map](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e8f9ea22-578f-427c-8edb-450fa6369188)
 
-4. **Exposing Honeypot To Malicious Actors:**
-   - Connect to the VM via the provided IP address (found within the VM properties under `networking`).
-   - Once connected, navigate to the `Windows Defender Firewall`.
-   - Select `Windows Defender Firewall Properties`
-   - Set `Firewall State` to `OFF` for the _Domain, Private, Public_ profiles.
-      - **!! NOTE: ENSURE THAT YOUR ARE EXPOSING YOUR VM, NOT YOUR HOST DEVICE !!**
-     ![Firewall Rule](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/7c03bfd2-358a-44f8-b486-7fb35b6e5154)
+---
 
-5. **Generating Log File with PowerShell Script:**
-   - Utilize a [PowerShell script](https://github.com/joshmadakor1/Sentinel-Lab/blob/main/Custom_Security_Log_Exporter.ps1) to generate custom security logs for Azure Sentinel.
-   - The script targets security events with event ID `4625` (Logon Failure), retrieves geolocation data using ipgeolocation.io API, and stores the fetched data in a log file.
-   - Execute the script.
-   
-6. **Creating a Custom Log for Log File:**
-   - Navigate to `Tables` in the Log Analytics Workspace.
-   - Click `create` -> `New custom log (MMA-based)`.
-   - Set the collection path to `C:\ProgramData\failed_rdp.log`.
-   - Name and create the custom log.
+## Skills Demonstrated
 
-7. **Viewing Custom Log:**
-   - Navigate to `Logs` in the LAW.
-   - Create a new query and search for the newly created log as shown below.
+- Microsoft Sentinel (SIEM) — workspace setup, workbook creation, map visualisation
+- Azure Log Analytics Workspace — custom log ingestion (Microsoft Monitoring Agent based), KQL querying
+- PowerShell — automated log generation targeting Event ID 4625
+- Geolocation enrichment via ipgeolocation.io API
+- Azure networking — NSG configuration, inbound rule management
+- Honeypot deployment methodology
 
-   ![Custom Log](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/ba5f2eb8-12ea-4616-b1e9-6595d4623c1e)
+---
 
+## How It Was Built
 
-     
-8. **Creating A Azure Sentinel Workspace & Workbook:**
-   - Navigate to `Sentinel`, create a new workspace.
-   - Select `Workbook` -> `Add Workbook`
-   - Edit the worrkbook; remove all elements in the created workbook.
-   - Select `Add` -> `Add Query`
-      - We must create a query that contain extract the data out of RawData into seperate columns
-      - [This query](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/blob/main/azure_query) can be used to do that exact thing.
-      - As shown below, we have now extracted each field from the RawData
+### 1. Honeypot VM Setup
+Deployed a Windows 11 Pro VM in Azure within a dedicated resource group. The NIC network security group was set to Advanced, with a custom inbound rule permitting all traffic at priority 100 — intentionally maximising exposure to inbound scanning.
 
-     ![Output From Query](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e7d9e5a2-8440-4f9d-bd43-cf127ba5399a)
-  - Change the `Visualization` from `Set by query` to `Map`
-  - Edit the `Map Settings`:
+### 2. Log Analytics Workspace
+Created a LAW in the same resource group as the VM. Microsoft Defender for Cloud was configured to collect All Events to ensure failed logon attempts were captured.
 
-     ![Map Settings](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/b0eca391-b285-49ef-a134-f8158de973f5)
-       - Change `Metric Label` to `label`
- 
-9. **Final Result - Live Attack Map:**
-   - Visualize real-time attack data on a world map within Azure Sentinel.
-   ![Live Attack Map](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e8f9ea22-578f-427c-8edb-450fa6369188)
-   **Note:This is after approximately 4-6 hours of VM exposure.**
+### 3. Firewall Disabled on VM
+Connected to the VM via RDP and disabled Windows Defender Firewall across Domain, Private, and Public profiles — making the VM visible to external scanners.
+
+### 4. PowerShell Log Generation
+Deployed a PowerShell script targeting Event ID 4625 (Logon Failure). For each failed attempt, the script calls the ipgeolocation.io API to retrieve location data and appends enriched records to `C:\ProgramData\failed_rdp.log`.
+
+### 5. Custom Log Ingestion
+Configured a custom MMA-based log table in the LAW pointing to the log file path. This made the raw geolocation-enriched data queryable within Azure.
+
+### 6. KQL Query & Data Extraction
+Wrote a KQL query to parse the RawData field into structured columns (latitude, longitude, country, label, etc.), enabling map-based visualisation.
+> Full query available [here](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/blob/main/azure_query)
+
+### 7. Sentinel Workbook & Map
+Created a Microsoft Sentinel workspace and workbook. Added a query-based tile, switched visualisation to Map, and configured metric labels — producing a live, auto-refreshing attack map.
+
+---
 
 ## Key Takeaway
 
