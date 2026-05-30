@@ -90,15 +90,7 @@ Have you ever wondered how to gain hands-on experience with a robust SIEM like A
    ![Live Attack Map](https://github.com/alexcolincrawford/Azure-Sentinel-SIEM/assets/59071533/e8f9ea22-578f-427c-8edb-450fa6369188)
    **Note:This is after approximately 4-6 hours of VM exposure.**
 
-## Acknowledgements
+## Key Takeaway
 
-   - I give my thanks to Josh Madakor for the invaluable guidance provided throughout this exceptional project, which allowed me to gain hands-on experience with Azure Sentinel SIEM.  Even though some of the content was outdated, I enjoyed the challenge    of updating it and finding my own solutions to keep it current
-
-## Key Takeaways
-
-   - The opportunity to explore Azure Sentinel through this project has been immensely educational and I can't wait to truly grasp the power of Sentinel!
-   - I also gained foundational experience in leveraging Azure Log Analytics Workspace and Microsoft Sentinel to analyze and visualize security events in real-time, which highlighted the importance of a Security Information and Event Management (SIEM)       system in cybersecurity operations!
-
-If you've read through to the end, thank you!
-
+An exposed RDP port doesn't stay quiet for long. Over 8,300 attempts from a single IP within hours demonstrates the scale of automated credential-stuffing infrastructure operating continuously across the internet, reinforcing why network segmentation, strong authentication, and SIEM monitoring are non-negotiable in any production environment.
 
